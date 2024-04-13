@@ -232,16 +232,12 @@ The value of this property:
 
 ### `minimum`
 
-(As of vT.B.D+)
-
 Represents the [min=](/ytt/docs/latest/lang-ref-ytt-schema/#min) named validation
 
 - Only exported if the `#@schema/validation min` property is present
 - Can be set together with `max=`
 
 ### `maximum`
-
-(As of vT.B.D+)
 
 Represents the [max=](/ytt/docs/latest/lang-ref-ytt-schema/#max) named validation
 
@@ -250,8 +246,6 @@ Represents the [max=](/ytt/docs/latest/lang-ref-ytt-schema/#max) named validatio
 
 ### `minLength`
 
-(As of vT.B.D+)
-
 Represents the [min_len=](/ytt/docs/latest/lang-ref-ytt-schema/#min_len) named validation
 
 - Only exported if the `#@schema/validation min_len=` property is present
@@ -259,16 +253,12 @@ Represents the [min_len=](/ytt/docs/latest/lang-ref-ytt-schema/#min_len) named v
 
 ### `maxLength`
 
-(As of vT.B.D+)
-
 Represents the [max_len=](/ytt/docs/latest/lang-ref-ytt-schema/#max_len) named validation
 
 - Only exported if the `#@schema/validation max_len=` property is present
 - Can be set together with `min_len=`
 
 ### `enum`
-
-(As of vT.B.D+)
 
 Represents the [one_of=](/ytt/docs/latest/lang-ref-ytt-schema/#one_of) named validation
 
