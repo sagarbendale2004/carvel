@@ -30,7 +30,7 @@ install() {
     kbld_checksum=aa19ffb064f38a0826c73fb34c58ce4ff0b1c508afb3e03f2f8d76b7e29202a2
     kapp_checksum=b4b980d4bc97508bec2416bc50888f55c7e4d96ada71a072003d2eee571db995
     kwt_checksum=ea9e6eb76b203799d9f0d3177ac32b9d1d8e531bae363141dfe7030cb6e53a88
-    vendir_checksum=0bf3840619436908b11fce2c7015d928450b41a3b9ef19fecc6223ff2ed084a4
+    vendir_checksum=842ad455037671e0b27149668a2563cd21b96864af1e1df85b0ed3bbba730a4f
     kctrl_checksum=81cc3a73fe9031650506dab614002c240effe1957b7739f8e622f03d08b1e42d
   else
     binary_type=linux-amd64
@@ -40,7 +40,7 @@ install() {
     kbld_checksum=c5eb701a9682e73a8caa636a735bd2a587343bcbdf6c2eaabb5d99b9c57cab7e
     kapp_checksum=6eb24733364213967c434ca77a7b3516f80c962e1da1ba57ce4c495556cf1585
     kwt_checksum=1022483a8b59fe238e782a9138f1fee6ca61ecf7ccd1e5f0d98e95c56df94d87
-    vendir_checksum=3e076a452d88d6e3bc190d527f4d7c949ab6eccae19bf5d3cbb910d53724f2b9
+    vendir_checksum=bd8ede60750471783b345ba969f6ccd3bf59d041ed093a4dea00f9bffa03376d
     kctrl_checksum=d399b865ad2081cc4761d57de00d0d93ef297d7198e7e329c3f195e47af79573
   fi
 
@@ -83,11 +83,11 @@ install() {
   echo "Installed ${dst_dir}/kwt v0.0.8"
   
   echo "Installing vendir..."
-  $dl_bin https://github.com/carvel-dev/vendir/releases/download/v0.40.0/vendir-${binary_type} > /tmp/vendir
+  $dl_bin https://github.com/carvel-dev/vendir/releases/download/v0.40.1/vendir-${binary_type} > /tmp/vendir
   echo "${vendir_checksum}  /tmp/vendir" | shasum -c -
   mv /tmp/vendir ${dst_dir}/vendir
   chmod +x ${dst_dir}/vendir
-  echo "Installed ${dst_dir}/vendir v0.40.0"
+  echo "Installed ${dst_dir}/vendir v0.40.1"
   
   echo "Installing kctrl..."
   $dl_bin https://github.com/carvel-dev/kapp-controller/releases/download/v0.50.2/kctrl-${binary_type} > /tmp/kctrl
