@@ -64,7 +64,7 @@ An example of directory structure formed from complying to [image spec](https://
 ```
 where one of the files in sha256 is the actual file tar and others 2 are configs and manifests.<br>
 
-2. Add a flag `--to-oci-tar` to `imgpkg push`  to be able to creata a tar while pushing a tar with imgpkg push command.
+2. Add a flag `--to-oci-tar` to `imgpkg push`  to be able to creata a tar while pushing a tar with imgpkg push command. `imgpkg push --to-oci-tar` will only create in disk the OCI image for the bundle itself. In the future we can have the inflate flag that might help with that use case as mentioned in the future goals. <br>
  
 3. Add a flag `--oci-tar` to `imgpkg copy` to be able to copy this oci kind of tar to a registry and differentiate with the `--tar` flag.
 
@@ -72,7 +72,7 @@ where one of the files in sha256 is the actual file tar and others 2 are configs
 
 1. An improvement would be to have only one flag `--tar` for `imgpkg copy` making no changes to flags but making it compatible and being smart enough to understand and differentiate between both kind of tars without any need for specification. <br>
 
-2. Add an inflate option to also contain all refs images in the oci-tar as discussed [here](https://github.com/carvel-dev/imgpkg/issues/55#issuecomment-962209740). This will be useful and true to the name of the command `imgpkg copy` as it will copy all the refs images as well and create a self-sufficient oci-tar. <br>
+2. Add an inflate option for both copy and push which will make the oci-image contain all refs images in the oci-tar as well. It is discussed [here](https://github.com/carvel-dev/imgpkg/issues/55#issuecomment-962209740). This will be useful as it will create a self-sufficient oci-tar similar to `imgpkg copy --to-tar` but in oci format. <br>
 
 ### Specification / Use Cases
 
@@ -86,7 +86,7 @@ Use Cases :
 The idea behind the usage of `imgpkg push -b my.registry.io/some-name -f some-folder --to-oci-tar local-oci-format.tar` is to concentrate in a single command all the options to create a new image, that being to the registry or directly to disk.
 
 I had considered not do the above but modifying the `imgpkg push command` to not require `-f folder` flag and being compatible with
-`imgpkg push -b my.registry.io/some-name --to-oci-tar local-oci-format.tar` to push the tar to the registry. <br><br>
+`imgpkg push -b my.registry.io/some-name --to-oci-tar local-oci-format.tar` to push the tar to the registry. <br>
 
 The reason this was dropped was it is similar to imgpkg copy command used above, although initially I had considered it because the copy command can be misleading when a user just wants to push his oci-tar. <br><br>
 
@@ -97,6 +97,6 @@ The reason this was dropped was it is similar to imgpkg copy command used above,
 3. Should we have a single flag `--tar` for `imgpkg copy` to be able to copy both kind of tars or should we have 2 flags `--tar` and `--oci-tar` ? <br>
 
 ## Answered Questions
-1. The usecase for save command is when a user only need the oci compliant tar file for sharing purposes and do not have a need to push to a registry. Since push will always require a registry for pushing even for oci-tar formation. <br>
+1. We already have a imgpkg copy --to-tar for that purpose. <br>
 2. The idea behind the usage of `imgpkg push -b my.registry.io/some-name -f some-folder --to-oci-tar local-oci-format.tar` is to concentrate in a single command all the options to create a new image, that being to the registry or directly to disk.
-3. A single flag would be better as it would be more intuitive and easy to use. <br>
+3. A single flag would be better as it would be more intuitive and easy to use, which we can work on in the future after the completion of the mvp. <br>
