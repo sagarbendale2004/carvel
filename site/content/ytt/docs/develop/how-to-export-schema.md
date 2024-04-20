@@ -234,36 +234,43 @@ The value of this property:
 
 Represents the [min=](/ytt/docs/latest/lang-ref-ytt-schema/#min) named validation
 
-- Only exported if the `#@schema/validation min` property is present
-- Can be set together with `max=`
+- only exported if the `#@schema/validation min` property is present
+- can be set together with `max=`
+- not exported if a `when=` attribute is present on the validation
 
 ### `maximum`
 
 Represents the [max=](/ytt/docs/latest/lang-ref-ytt-schema/#max) named validation
 
-- Only exported if the `#@schema/validation max=` property is present
-- Can be set together with `min=`
+- only exported if the `#@schema/validation max=` property is present
+- can be set together with `min=`
+- not exported if a `when=` attribute is present on the validation
 
-### `minLength`
+### `minLength` / `minItems` / `minProperties`
 
 Represents the [min_len=](/ytt/docs/latest/lang-ref-ytt-schema/#min_len) named validation
 
-- Only exported if the `#@schema/validation min_len=` property is present
-- Can be set together with `max_len=`
+- only exported if the `#@schema/validation min_len=` property is present
+- can be set together with `max_len=`
+- not exported if a `when=` attribute is present on the validation
+- the name of this property depends on the value type, `string` =  `minLength`, `array` = `minItems`, `object` = `minProperties`
 
-### `maxLength`
+### `maxLength` / `maxItems` / `maxProperties`
 
 Represents the [max_len=](/ytt/docs/latest/lang-ref-ytt-schema/#max_len) named validation
 
-- Only exported if the `#@schema/validation max_len=` property is present
-- Can be set together with `min_len=`
+- only exported if the `#@schema/validation max_len=` property is present
+- can be set together with `min_len=`
+- not exported if a `when=` attribute is present on the validation
+- the name of this property depends on the value type, `string` =  `maxLength`, `array` = `maxItems`, `object` = `maxProperties`
 
 ### `enum`
 
 Represents the [one_of=](/ytt/docs/latest/lang-ref-ytt-schema/#one_of) named validation
 
-- Only exported if the `#@schema/validation one_of=[]` property is present
-- Supports `string` and `integer` values
+- only exported if the `#@schema/validation one_of=[]` property is present
+- supports `string` and `number` values
+- not exported if a `when=` attribute is present on the validation
 
 ## Known Limitations
 
