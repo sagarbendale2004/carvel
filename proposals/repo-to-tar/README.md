@@ -92,11 +92,5 @@ The reason this was dropped was it is similar to imgpkg copy command used above,
 
 
 ## Open Questions
-1. Do we need save command to be able to save a tar file from a bundle image or should we just use push command to do the same as it forms the tar ? <br> 
-2. If save can create a `oci-tar` and `copy` can copy/push the tar to the repo, what is the need to make it compatible with `push` command ? <br>
-3. Should we have a single flag `--tar` for `imgpkg copy` to be able to copy both kind of tars or should we have 2 flags `--tar` and `--oci-tar` ? <br>
 
 ## Answered Questions
-1. We already have a imgpkg copy --to-tar for that purpose. <br>
-2. The idea behind the usage of `imgpkg push -b my.registry.io/some-name -f some-folder --to-oci-tar local-oci-format.tar` is to concentrate in a single command all the options to create a new image, that being to the registry or directly to disk.
-3. A single flag would be better as it would be more intuitive and easy to use, which we can work on in the future after the completion of the mvp. <br>
