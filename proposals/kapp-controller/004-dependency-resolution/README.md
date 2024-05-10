@@ -1,7 +1,7 @@
 ---
 title: "Dependency Resolution in KC"
 authors: [ "Praveen Rewar <prewar@vmware.com>" ]
-status: "In Review"
+status: "Approved"
 approvers: [ "Carvel Maintainers" ]
 ---
 
