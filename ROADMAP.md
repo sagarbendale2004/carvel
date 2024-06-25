@@ -18,7 +18,7 @@ Please take the timelines & dates as proposals and goals, not commitments. Prior
 `Last Updated: April 2024`
 |Feature|Stage|Timeline| 
 |---|---|---|
-**[kapp-controller]** [Dependency management](https://github.com/carvel-dev/kapp-controller/issues/361) | Awaiting Proposal | 2024 Q2 |
+**[kapp-controller]** [Dependency management](https://github.com/carvel-dev/kapp-controller/issues/361) | Milestones Created missing stories | 2024 Q2 |
 **[kctrl]** [Release package repository as tar](https://github.com/carvel-dev/kapp-controller/issues/1277) | In Progress | 2024 Q1 |
 **[Carvel]** [Carvel.dev's docs improvements](https://github.com/carvel-dev/carvel/issues/744) | In Progress | 2024 Q4 |
 
