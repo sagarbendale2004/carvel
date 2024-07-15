@@ -26,7 +26,7 @@ install() {
     binary_type=darwin-amd64
     
     ytt_checksum=10bb753984bed1f351fb767810fdccb5def531ad77b27093f71698a44ab45965
-    imgpkg_checksum=59f0af401217f3dc36163c31e093b5bdceeaf9397576e894b591a014480b9c1b
+    imgpkg_checksum=02a7e3fd0142c1053c14a87084820c1940f34c7372c16d883ef54091a37ac30d
     kbld_checksum=cfdfc5198b746b564ec81486e5d8e6aa944a7c326adf502091dbd75e5f5b4898
     kapp_checksum=8ad9d09844fd0710537190e1743b8fbcbe02b05f8180151e3420908120731071
     kwt_checksum=ea9e6eb76b203799d9f0d3177ac32b9d1d8e531bae363141dfe7030cb6e53a88
@@ -36,7 +36,7 @@ install() {
     binary_type=linux-amd64
     
     ytt_checksum=20a2f7466157a9c6189e885d0027e17c48776e65627f30fe04bffeef1d6f6166
-    imgpkg_checksum=bea6e08f5f6bf8b2a7f31486c41b34715e5dd6e4319e15968e25cd570daf5446
+    imgpkg_checksum=4f87f219012e48b917d7aaf8b0ee71729f2572fc1a3deb7483bd8744fe2e1a06
     kbld_checksum=119e7d11e66e512896ce42aba9cc7f783388da3cbb258b793e7419a3167af2a9
     kapp_checksum=3eed107de438378b35e619b37791512984e870e7e647fea312226a0e6fc9cd43
     kwt_checksum=1022483a8b59fe238e782a9138f1fee6ca61ecf7ccd1e5f0d98e95c56df94d87
@@ -55,11 +55,11 @@ install() {
   echo "Installed ${dst_dir}/ytt v0.49.1"
   
   echo "Installing imgpkg..."
-  $dl_bin https://github.com/carvel-dev/imgpkg/releases/download/v0.42.2/imgpkg-${binary_type} > /tmp/imgpkg
+  $dl_bin https://github.com/carvel-dev/imgpkg/releases/download/v0.43.0/imgpkg-${binary_type} > /tmp/imgpkg
   echo "${imgpkg_checksum}  /tmp/imgpkg" | shasum -c -
   mv /tmp/imgpkg ${dst_dir}/imgpkg
   chmod +x ${dst_dir}/imgpkg
-  echo "Installed ${dst_dir}/imgpkg v0.42.2"
+  echo "Installed ${dst_dir}/imgpkg v0.43.0"
   
   echo "Installing kbld..."
   $dl_bin https://github.com/carvel-dev/kbld/releases/download/v0.43.0/kbld-${binary_type} > /tmp/kbld
