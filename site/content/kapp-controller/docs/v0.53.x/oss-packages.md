@@ -1,5 +1,5 @@
 ---
-
+aliases: [/kapp-controller/docs/latest/oss-packages]
 title: OSS Carvel Packages
 ---
 
@@ -12,4 +12,3 @@ kapp-controller can itself be installed as a package, this is sometimes useful t
 
 ## secretgen-controller package
 Similar to kapp-controller, secretgen-controller can also be installed via a package and it can be found in the release artifacts of secretgen-controller [releases](https://github.com/carvel-dev/secretgen-controller/releases). These packages are created via kctrl's package authoring commands.
-

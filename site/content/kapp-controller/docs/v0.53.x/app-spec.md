@@ -1,5 +1,5 @@
 ---
-
+aliases: [/kapp-controller/docs/latest/app-spec]
 title: App CR spec
 ---
 
@@ -145,6 +145,8 @@ spec:
         subPath: config-step-2-template
         # skip lfs download (optional)
         lfsSkipSmudge: true
+        # Force the usage of HTTP Basic Auth when Basic Auth is provided (optional)
+        forceHTTPBasicAuth: false
         # specifies a strategy to resolve to an explicit ref (optional; v0.24.0+)
         refSelection:
           semver:

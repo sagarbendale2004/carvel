@@ -1,6 +1,6 @@
 ---
-
-
+aliases: [/kapp-controller/docs/latest/kctrl-package-authoring]
+aliases: [/kapp-controller/docs/latest/kctrl-package-authoring]
 title: Authoring packages with kctrl
 ---
 
@@ -195,7 +195,7 @@ The configuration for the same can be found in the `config` directory. The inter
 
 ![Package Init for Simple App](/images/kctrl/pkg-init-simple-app.png)
 
-This command generates `package-build.yml` and `package-reources.yml` files that tell `kctrl` how it should put the package together!
+This command generates `package-build.yml` and `package-resources.yml` files that tell `kctrl` how it should put the package together!
 
 ### Releasing the package
 
