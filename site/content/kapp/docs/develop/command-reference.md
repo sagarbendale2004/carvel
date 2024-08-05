@@ -50,6 +50,7 @@ Apply flags:
 - `--apply-timeout`, _duration_, Maximum amount of time to wait in apply phase (default 15m0s)
 - `--dangerous-allow-empty-list-of-resources`, _boolean_, Allow to apply empty set of resources (same as running kapp delete)
 - `--dangerous-override-ownership-of-existing-resources`, _boolean_, Steal existing resources from another app
+- `--ownership-override-allowed-apps`, _strings_, Specify existing apps in the same namespace that existing resources can be stolen from if --dangerous-override-ownership-of-existing-resources is set
 
 Wait flags:
 - `--wait`, _boolean_, Set to wait for changes to be applied (default true)
