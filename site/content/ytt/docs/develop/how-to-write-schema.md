@@ -248,7 +248,7 @@ honeycomb:
   optional_config: null
 ```
 
-Here, `additional_config` can contain any valid YAML.
+Here, `optional_config` can contain any valid YAML.
 
 For example:
 
