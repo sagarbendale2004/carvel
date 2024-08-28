@@ -7,16 +7,19 @@ Maintainers may focus on one or many tools. Some maintainers have different resp
 
 | Maintainer            | GitHub ID                                             | Affiliation                              | Carvel Tool Focus                                                                                                                                                                                                                  |
 |-----------------------|-------------------------------------------------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dmitriy Kalinin       | [cppforlife](https://github.com/cppforlife)           | [VMware](https://www.github.com/vmware/) | All Tools (Approver)                                                                                                                                                                                                               |
-| João Pereira          | [joaopapereira](https://github.com/joaopapereira)     | [VMware](https://www.github.com/vmware/) | [imgpkg](https://github.com/carvel-dev/imgpkg) (Lead), [kbld](https://github.com/carvel-dev/kbld), [vendir](https://github.com/carvel-dev/vendir) |
+| Dmitriy Kalinin       | [cppforlife](https://github.com/cppforlife)           | [Broadcom](https://www.broadcom.com) | All Tools (Approver)                                                                                                                                                                                                               |
+| João Pereira          | [joaopapereira](https://github.com/joaopapereira)     | [Broadcom](https://www.broadcom.com) | [imgpkg](https://github.com/carvel-dev/imgpkg) (Lead), [kbld](https://github.com/carvel-dev/kbld), [vendir](https://github.com/carvel-dev/vendir) |
 | John Brunton          | [jbrunton](https://github.com/jbrunton)               | [converge.io](https://converge.io/)      | [carvel-setup-action](https://github.com/carvel-dev/setup-action) (Approver) |
-| Kumari Tanushree      | [kumaritanushree](https://github.com/kumaritanushree) | [VMware](https://www.github.com/vmware/) | [vendir](https://github.com/carvel-dev/vendir), [kapp](https://github.com/carvel-dev/kapp) |
-| Praveen Rewar         | [praveenrewar](https://github.com/praveenrewar)       | [VMware](https://www.github.com/vmware/) | [kapp](https://github.com/carvel-dev/kapp) (Approver), [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli) (Approver), [kapp-controller](https://github.com/carvel-dev/kapp-controller)(Reviewer), [imgpkg](https://github.com/carvel-dev/imgpkg) |
-| Rohit Aggarwal        | [rohitagg2020](https://github.com/rohitagg2020)       | [VMware](https://www.github.com/vmware/) | [kapp](https://github.com/carvel-dev/kapp) (Reviewer), [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli) (Reviewer), [secretgen-controller](https://github.com/carvel-dev/secretgen-controller) |
-| Soumik Majumder       | [100mik](https://github.com/100mik)                   | [VMware](https://www.github.com/vmware/) | [kapp](https://github.com/carvel-dev/kapp) (Approver), [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli) (Approver), [ytt](https://github.com/carvel-dev/ytt) |
-| Varsha Munishwar      | [vmunishwar](https://github.com/vmunishwar)           | [VMware](https://www.github.com/vmware/) | [ytt](https://github.com/carvel-dev/ytt), [vendir](https://github.com/carvel-dev/vendir)                                                                                                                                                                                  |
-| Yash Sethiya          | [sethiyash](https://github.com/sethiyash)             | [VMware](https://www.github.com/vmware/) | [ytt](https://github.com/carvel-dev/ytt), [kbld](https://github.com/carvel-dev/kbld)                                                                                                                                                                                |
-| Premkumar Bhaskal     | [prembhaskal](https://github.com/prembhaskal)         | [VMware](https://www.github.com/vmware/) | [ytt](https://github.com/carvel-dev/ytt)                                                                                                                                                                                |
+| Praveen Rewar         | [praveenrewar](https://github.com/praveenrewar)       | [Broadcom](https://www.broadcom.com) | [kapp](https://github.com/carvel-dev/kapp) (Approver), [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli) (Approver), [kapp-controller](https://github.com/carvel-dev/kapp-controller)(Reviewer), [imgpkg](https://github.com/carvel-dev/imgpkg) |
+| Rohit Aggarwal        | [rohitagg2020](https://github.com/rohitagg2020)       | [Broadcom](https://www.broadcom.com) | [kapp](https://github.com/carvel-dev/kapp) (Reviewer), [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli) (Reviewer), [secretgen-controller](https://github.com/carvel-dev/secretgen-controller) |
+| Soumik Majumder       | [100mik](https://github.com/100mik)                   | [Broadcom](https://www.broadcom.com) | [kapp](https://github.com/carvel-dev/kapp) (Approver), [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli) (Approver), [ytt](https://github.com/carvel-dev/ytt) |
+| Premkumar Bhaskal     | [prembhaskal](https://github.com/prembhaskal)         | [Intuit](https://www.intuit.com) | [ytt](https://github.com/carvel-dev/ytt)                                                                                                                                                                                |
+| Thomas Vitale     | [ThomasVitale](https://github.com/ThomasVitale)         | [Systematic](https://systematic.com/en-gb/) | [ytt](https://github.com/carvel-dev/kapp-controller) , Community Champion |
+| German Lashevich     | [Zebradil](https://github.com/Zebradil)         | [Trivago](https://github.com/trivago) | [vendir](https://github.com/carvel-dev/vendir) (Reviewer) |
+| Max Brauer   | [mamachanko](https://github.com/mamachanko)         | [Broadcom](https://www.broadcom.com) |  [ytt](https://github.com/carvel-dev/ytt), [kapp-controller](https://github.com/carvel-dev/kapp-controller), [secretgen-controller](https://github.com/carvel-dev/secretgen-controller)  |
+| Bryce Palmer   | [everettraven](https://github.com/everettraven)         | [RedHat](https://www.redhat.com/en) |  [kapp](https://github.com/carvel-dev/kapp)  |
+| Rashmi Gottipati   | [rashmigottipati](https://github.com/rashmigottipati)    | [RedHat](https://www.redhat.com/en) |  [kapp](https://github.com/carvel-dev/kapp)  |
+
 
 
 ## Emeritus Maintainers and Stakeholders
@@ -32,6 +35,9 @@ Maintainers may focus on one or many tools. Some maintainers have different resp
 * John Ryan, [pivotaljohn](https://github.com/pivotaljohn)
 * Neil Hickey, [neil-hickey](https://github.com/neil-hickey)
 * Nanci Lancaster, [microwavables](https://github.com/microwavables)
+* Kumari Tanushree, [kumaritanushree](https://github.com/kumaritanushree)
+* Varsha Munishwar, [vmunishwar](https://github.com/vmunishwar)
+* Yash Sethiya, [sethiyash](https://github.com/sethiyash)     
 
 ## Carvel Stakeholders
 
