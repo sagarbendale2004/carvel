@@ -19,7 +19,7 @@ Maintainers may focus on one or many tools. Some maintainers have different resp
 | Max Brauer   | [mamachanko](https://github.com/mamachanko)         | [Broadcom](https://www.broadcom.com) |  [ytt](https://github.com/carvel-dev/ytt), [kapp-controller](https://github.com/carvel-dev/kapp-controller), [secretgen-controller](https://github.com/carvel-dev/secretgen-controller)  |
 | Bryce Palmer   | [everettraven](https://github.com/everettraven)         | [RedHat](https://www.redhat.com/en) |  [kapp](https://github.com/carvel-dev/kapp)  |
 | Rashmi Gottipati   | [rashmigottipati](https://github.com/rashmigottipati)    | [RedHat](https://www.redhat.com/en) |  [kapp](https://github.com/carvel-dev/kapp)  |
-
+| Devanshu   | [devanshuVmware](https://github.com/devanshuVmware)    | [Broadcom](https://www.broadcom.com) |  [kctrl](https://github.com/carvel-dev/kapp-controller/tree/develop/cli)  |
 
 
 ## Emeritus Maintainers and Stakeholders
