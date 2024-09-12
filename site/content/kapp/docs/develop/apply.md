@@ -43,6 +43,8 @@ In some cases entire resources or subset resource fields are immutable which for
 - `always-replace` causes kapp to always delete and then create resource (See note above as well.)
 - `skip` causes kapp to not apply update (it will show up in a diff next time). Available in v0.33.0+.
 
+There is also a CLI-wide flag `--apply-default-update-strategy`. If set, it will be used as a default value for all resources that do not have `kapp.k14s.io/update-strategy` annotation set. If used, consider explicitly annotating individual resources that should not be replaced with `""` or `"skip"`.
+
 ### kapp.k14s.io/delete-strategy
 
 `kapp.k14s.io/delete-strategy` annotation controls deletion behaviour

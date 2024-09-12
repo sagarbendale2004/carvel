@@ -29,6 +29,8 @@ See [state namespace](state-namespace.md) doc page.
 
 Some fields on a resource are immutable. kapp provides a `kapp.k14s.io/update-strategy` annotation that controls how kapp will update resource. One of the strategies is `fallback-on-replace` which will have kapp recreate an object (delete, wait, then create) if initial update results in `Invalid` error. See [Controlling apply via resource annotations](apply.md#controlling-apply-via-resource-annotations) for details.
 
+The CLI flag `--apply-default-update-strategy=fallback-on-replace` can be used to instruct `kapp` to default to this behavior for all resources. Consider specifically annotating specific resources you wish to protect from deletion if you use this.
+
 ---
 ## `Job.batch is invalid: ... spec.selector: Required value` error
 
