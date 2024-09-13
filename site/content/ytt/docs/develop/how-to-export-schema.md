@@ -23,7 +23,7 @@ load_balancer:
   enabled: true
   #@schema/nullable
   static_ip: ""
-  
+
 #@schema/title "DNS domains"
 #@schema/desc "DNS domains to accept traffic for."
 #@schema/default ["apps.example.com", "mobile.example.com"]
@@ -36,8 +36,11 @@ app_domains:
 #@schema/examples ("Example for local db", [{"name": "default", "adapter": "postgresql", "host": "localhost", "port": 8080}])
 databases:
 - name: ""
+  #@schema/validation one_of=["postgresql", "mariadb"]
   adapter: postgresql
   host: ""
+  #@schema/desc "Only allow unprivileged ports"
+  #@schema/validation min=1024
   port: 5432
 
 #@schema/title "Additional configuration"
@@ -115,12 +118,17 @@ components:
               adapter:
                 type: string
                 default: postgresql
+                enum:
+                - postgresql
+                - mariadb
               host:
                 type: string
                 default: ""
               port:
                 type: integer
+                description: Only allow unprivileged ports
                 default: 5432
+                minimum: 1024
           default: []
         additional_config:
           title: Additional configuration
@@ -173,6 +181,7 @@ Indicates whether `null` is also allowed.
 
 - when a data value is annotated `@schema/nullable` or `@schema/type any=True`, this property is included and set to `true`;
 - otherwise, this property is omitted.
+- `#@schema/validation not_null=` is not supported
 
 ### `deprecated`
 
@@ -221,10 +230,53 @@ The value of this property:
 - is typically the value of the data value in the `ytt` schema;
 - if the data value is annotated `@schema/default`, _that_ value is used instead.
 
+### `minimum`
+
+Represents the [min=](/ytt/docs/latest/lang-ref-ytt-schema/#min) named validation
+
+- only exported if the `#@schema/validation min` property is present
+- can be set together with `max=`
+- not exported if a `when=` attribute is present on the validation
+
+### `maximum`
+
+Represents the [max=](/ytt/docs/latest/lang-ref-ytt-schema/#max) named validation
+
+- only exported if the `#@schema/validation max=` property is present
+- can be set together with `min=`
+- not exported if a `when=` attribute is present on the validation
+
+### `minLength` / `minItems` / `minProperties`
+
+Represents the [min_len=](/ytt/docs/latest/lang-ref-ytt-schema/#min_len) named validation
+
+- only exported if the `#@schema/validation min_len=` property is present
+- can be set together with `max_len=`
+- not exported if a `when=` attribute is present on the validation
+- the name of this property depends on the value type, `string` =  `minLength`, `array` = `minItems`, `object` = `minProperties`
+
+### `maxLength` / `maxItems` / `maxProperties`
+
+Represents the [max_len=](/ytt/docs/latest/lang-ref-ytt-schema/#max_len) named validation
+
+- only exported if the `#@schema/validation max_len=` property is present
+- can be set together with `min_len=`
+- not exported if a `when=` attribute is present on the validation
+- the name of this property depends on the value type, `string` =  `maxLength`, `array` = `maxItems`, `object` = `maxProperties`
+
+### `enum`
+
+Represents the [one_of=](/ytt/docs/latest/lang-ref-ytt-schema/#one_of) named validation
+
+- only exported if the `#@schema/validation one_of=[]` property is present
+- supports `string` and `number` values
+- not exported if a `when=` attribute is present on the validation
+
 ## Known Limitations
 
 The following are not yet supported in `ytt`:
-- `ytt` schema does not yet support declarative validations and thus does not produce such validations in an OpenAPI export.
+- only [Named Validation Rules](/ytt/docs/latest/lang-ref-ytt-schema/#named-validation-rules) are supported as validations.
+- custom validation rules using `lambda` are not supported.
 - there is no means yet to modify the [`info` section of the OpenAPI document](https://swagger.io/specification/#info-object) from within a `--data-values-schema-inspect`. There are defaults supplied, however we recommend that these fields are updated manually.
 - inspecting output in `ytt` Schema format is not yet supported.
 
